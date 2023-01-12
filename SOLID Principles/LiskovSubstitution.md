@@ -5,18 +5,23 @@ Subclass should extend the parent class Behavior, not narrow it down
 
 Example 
 
+```
 interface Rider{
     public void turnEngine();
     public void accelerate();
 }
+```
 
+```
 class Bike implements Rider{
     @override
     public void turnEngine(){};
     @override
     public void accelerate(){};
 }
+```
 
+```
 class Bicycle implements Rider{
     @override
     public void turnEngine(){
@@ -25,5 +30,6 @@ class Bicycle implements Rider{
     @override
     public void accelerate(){};
 }
+```
 
 The above example voids liskov substitution as we cannot use instance of Bicycle instead of Bike
